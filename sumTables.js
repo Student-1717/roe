@@ -6,16 +6,16 @@ const { chromium } = require('playwright');
 
   // URLs for Seed 73 to Seed 82
   const urls = [
-    'https://example.com/seed73',
-    'https://example.com/seed74',
-    'https://example.com/seed75',
-    'https://example.com/seed76',
-    'https://example.com/seed77',
-    'https://example.com/seed78',
-    'https://example.com/seed79',
-    'https://example.com/seed80',
-    'https://example.com/seed81',
-    'https://example.com/seed82'
+    'https://sanand0.github.io/tdsdata/js_table/?seed=73',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=74',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=75',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=76',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=77',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=78',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=79',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=80',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=81',
+    'https://sanand0.github.io/tdsdata/js_table/?seed=82'
   ];
 
   let grandTotal = 0;
