@@ -1,11 +1,3 @@
-name: Playwright QA
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
 jobs:
   run-playwright:
     runs-on: ubuntu-latest
@@ -18,8 +10,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install playwright
+      - name: Install dependencies and browsers
+        run: |
+          npm install playwright
+          npx playwright install
 
       - name: Run Playwright script for 24f2005754@ds.study.iitm.ac.in
         run: node sumTables.js
