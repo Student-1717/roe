@@ -8,11 +8,11 @@ jobs:
   build:
     strategy:
       matrix:
-        version: [14, 16, 18]
+        version: [14, 16, 18]  # Three variants → 3 jobs
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: matrix-0cbd415
