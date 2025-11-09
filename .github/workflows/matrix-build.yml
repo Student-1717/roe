@@ -1,0 +1,28 @@
+name: Matrix Build with Artifacts
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        version: [14, 16, 18]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: matrix-0cbd415
+        run: echo "Building for version ${{ matrix.version }}"
+
+      - name: Generate build artifact
+        run: echo "Build output for version ${{ matrix.version }}" > output.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-0cbd415-v${{ matrix.version }}
+          path: output.txt
